@@ -20,7 +20,7 @@ package com.corejava;
 class TestTwo  extends TestOne
 { 
   @Override
-  public  void m1()
+  public void m1()
 {
 	 System.out.println("TestTwo:m1");
 }
@@ -57,9 +57,9 @@ public static void main(String[] args)
 
 
 /*o/p:-
-A:m1
-B:m1
-B:m1
+TestTwo:m1
+TestOne:m2
+
 */
 
                                     // (METHOD HIDING) for static method to STOP overriding
@@ -113,7 +113,7 @@ public static void main(String[] args)
 
 
 /*o/p:-
-	A:m1
-	B:m1
-	A:m1*/
+	TestTwo:m1
+TestOne:m2
+*/
 	

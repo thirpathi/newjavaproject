@@ -4,11 +4,14 @@ import java.util.Arrays;
 
 public class Anagrams {
 
-	
+	//Two strings are called anagrams if they contain same set of characters but in different order.
+	// s1 = "Hello";
+	// s2 = "llohe";
+
 	public static void main(String[] args) {
 		
 		String s1 = "THIRU";
-		String s2 = "t";
+		String s2 = "UTHIR";
 		
 		/*s1 = s1.toLowerCase();             // if required (wantedly) we strict to Lower/Upper
 		s2 = s2.toLowerCase();

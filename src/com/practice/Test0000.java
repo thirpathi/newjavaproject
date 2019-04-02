@@ -1,6 +1,6 @@
 package com.practice;
 
-public class Test0000       //default class Test0000 
+class Test0000       //default class Test0000 
 {
 	public void add(int a,int b)
 	{

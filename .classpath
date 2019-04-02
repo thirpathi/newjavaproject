@@ -6,5 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/sikulinewjar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/htmlunit-driver-jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium new jars"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium jars old"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

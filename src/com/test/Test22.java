@@ -32,7 +32,7 @@ public class Test22 extends DriverSetUp
 		Thread.sleep(5000);
 		js.executeScript("document.getElementsByName('Email')[0].value='mindq';");
 */	
-	    d.close();
+	    d.quit();
 	}
 	
 	

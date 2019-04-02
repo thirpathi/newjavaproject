@@ -3,6 +3,7 @@ package com.selenium;             // How To Stimulate forward and backwadr :- By
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Navigate
@@ -13,7 +14,9 @@ public class Navigate
 	 // diff b/w get() & navigate() :- By using these two methods we can pass the url and open the application
 	//but by using naviagte() we can open the External application.
 	   
-     WebDriver d = new FirefoxDriver();
+    // WebDriver d = new FirefoxDriver();
+	 System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
+     WebDriver d = new ChromeDriver();
      d.manage().window().maximize();
      d.manage().deleteAllCookies();
      d.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);

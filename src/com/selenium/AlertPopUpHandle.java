@@ -6,14 +6,15 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AlertPopUpHandle 
 {
 	public static void main(String[] args) throws InterruptedException {
 		
-	  WebDriver d = new ChromeDriver();
-	   //  d.manage().window().maximize();
+	    // WebDriver d = new ChromeDriver();
+		 System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
+         WebDriver d = new ChromeDriver();
+	     d.manage().window().maximize();
 	     d.manage().deleteAllCookies();
 	     d.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	     
@@ -21,10 +22,10 @@ public class AlertPopUpHandle
 	     d.findElement(By.xpath("//*[@name='proceed']")).click();
 	     Thread.sleep(2000);
 	     
-	     d.switchTo().alert().accept();               // it will also working comfortabilly 
+	     //d.switchTo().alert().accept();               // it will also working comfortabilly 
 	     
+	                  // OR
 	     
-	  /*   
 	    // d.switchTo().alert().accept();           // but this is more efficiency
 	    Alert alert = d.switchTo().alert();
 	    System.out.println(alert.getText());
@@ -43,9 +44,17 @@ public class AlertPopUpHandle
 	    alert.accept();
 	    System.out.println("************");
 	     
-	     
-	     
-	     */
-	     
+	    Thread.sleep(10000);
+	    
+	    d.quit();
+
 	}
 }
+
+
+/*o\p:-
+ok
+Please enter a valid user name
+correct alert message
+************
+*/

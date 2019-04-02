@@ -1,6 +1,7 @@
 package com.selenium;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -9,7 +10,9 @@ public class WebDriverMethods
 {
   public static void main(String[] args)
   {
-	WebDriver d=new FirefoxDriver();
+	//WebDriver d=new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
+    WebDriver d = new ChromeDriver();
 	d.manage().window().maximize();
 	d.get("https://www.gmail.com");
 	
@@ -22,8 +25,8 @@ public class WebDriverMethods
 	String title=d.getTitle();
 	System.out.println("title of the page is:"+title);
 	
-	/*String Pagesource=webDriver.getPageSource();
-	System.out.println("pagesource is:"+Pagesource);*/
+	String Pagesource=d.getPageSource();
+	System.out.println("pagesource is:"+Pagesource);
     	
 	d.close();
 	
@@ -42,8 +45,8 @@ public class WebDriverMethods
 	d.getWindowHandle()
 	getWindowHandeles();
 	navigate();
-	d.close();
-    d.quit();
+	d.close(); ----it is close all opened windows in currently working browser only.
+    d.quit();  ----it is also close all opened windows and browsers too.
 	*/
 	
   }

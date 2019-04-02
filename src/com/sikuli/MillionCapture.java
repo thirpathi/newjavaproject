@@ -7,8 +7,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Match;
 import org.sikuli.script.Region;
@@ -19,8 +18,9 @@ public class MillionCapture
 {
 	public static void main(String[] args) throws InterruptedException, IOException, FindFailed 
 	{
-		System.setProperty("webdriver.gecko.driver","E:\\Batch230\\geckodriver.exe");	
-		WebDriver driver=new FirefoxDriver();
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\ChromeDriver.exe");
+		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("http://www.millionclouds.com/");

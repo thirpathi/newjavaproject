@@ -11,19 +11,18 @@ public static void main(String[] args) {
 }  
 }  */
 
-public class WhileLoop 
-{  
-  public static void main(String[] args) 
-   { 
-    int i=0;  
-    while(i<=3)              //  	for( int i=0; i<=3; ++i )        //-----> (initialization ; condition ; increment/decrement)   [ i++ = ++i ]--equals
-    {  
-    System.out.println(i);  
-    ++i;  
-    }  
-  }  
-}  
-
+public class WhileLoop {
+	public static void main(String[] args) {
+		int i = 0;
+		while (i <= 3) // for( int i=0; i<=3; ++i ) //-----> (initialization ;
+						// condition ; increment/decrement) [ i++ = ++i
+						// ]--equals
+		{
+			System.out.println(i);
+			++i;
+		}
+	}
+}
 
 
 

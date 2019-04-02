@@ -27,8 +27,8 @@ public class ReverseString
 		
 		System.out.println("********************************************");
 		
-		
-		StringBuffer sb = new StringBuffer(s);
+		StringBuilder sb = new StringBuilder(s);  // mutable
+		//StringBuffer sb = new StringBuffer(s);  // mutable
 		System.out.println(sb.reverse());
      
 	}

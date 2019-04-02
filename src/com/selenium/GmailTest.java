@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,8 +27,9 @@ public class GmailTest
 	PropertyConfigurator.configure("D:\\rameshsoft\\workspace\\newjavaproject\\log4j.properties");
 	Logger log = Logger.getLogger("GmailTest");
     //Logger log = Logger.getLogger("GmailTest");
-	
-	WebDriver d = new FirefoxDriver();
+	 System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
+     WebDriver d = new ChromeDriver();
+	//WebDriver d = new FirefoxDriver();
 	d.manage().timeouts().implicitlyWait(9000,TimeUnit.SECONDS);
 	
 	d.manage().window().maximize();
@@ -53,9 +55,13 @@ public class GmailTest
 	WebElement password = d.findElement(By.xpath("//input[@name='password']"));
 	password.clear();
 	password.sendKeys("8352794111");
+	log.info("password is validate");
+
 	
 	WebElement signin = d.findElement(By.xpath("//div[@id='passwordNext']"));
 	signin.click();
+	log.info("butten is working");
+
 	
 	//Thread.sleep(5000);
 	WebDriverWait wait1 = new WebDriverWait(d,60);

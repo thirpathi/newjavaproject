@@ -3,26 +3,28 @@ package com.selenium;                //GmailTestValidations
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GmailTestValidations 
 {
 
    public static void main(String[] args) throws InterruptedException 
 	{
-	   WebDriver d = new FirefoxDriver();
+	  // WebDriver d = new FirefoxDriver();
+
+ 	   System.setProperty("webdriver.chrome.driver", "D:\\drivers\\ChromeDriver.exe");
+	   ChromeDriver d = new ChromeDriver();
 	   d.manage().window().maximize();
 	   d.manage().deleteAllCookies();
-	   d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	   d.get("https://www.gmail.com");   
 	   /*String atualTitle = d.getTitle();
 	   String expectedTitle = "Gmail";
 	   */   
 
 	// gmail page is opend or not
-	  WebElement emailorphTxt = d.findElement(By.xpath("//input[@id='identifierIdNext']"));
+	  WebElement emailorphTxt = d.findElement(By.xpath("//input[@id='identifierId']"));
 	    if (emailorphTxt.isDisplayed())
 	    {
 	      System.out.println("gmail page is opend");
@@ -55,7 +57,7 @@ public class GmailTestValidations
         if(profileIdentifierTxt.isDisplayed() && profileIdentifierTxt.isEnabled())
         {
         	String emailText = profileIdentifierTxt.getText();
-        if (emailText.equalsIgnoreCase("rudratejas@gmail.com"))
+        if (emailText.equalsIgnoreCase("rudratejas123456789@gmail.com"))    //  (wantedlly)
         {
         	System.out.println("our entered gmail is currect");
         }

@@ -16,9 +16,9 @@ public class AutomateYoutub
 	public static void main(String[] args) throws InterruptedException, FindFailed
 	{
 		
-		System.setProperty("webdriver.chrome.driver","E:\\Batch230\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		//driver.manage().window().maximize();
+		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\ChromeDriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+			//driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.youtube.com/");
 		Thread.sleep(5000);
@@ -38,6 +38,7 @@ public class AutomateYoutub
 		s.click("pngImages\\skipAdd.png");
 		}
 		
+		Thread.sleep(5000);
 		//click pause
 		s.wheel(l,Button.LEFT,0);
 		s.click("pngImages\\pause1.png");

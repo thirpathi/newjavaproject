@@ -13,21 +13,21 @@ public class GmailTotalCounts {
 		
 		
           System.setProperty("webdriver.chrome.driver","D:\\drivers\\chromedriver.exe");
-		  WebDriver d = new ChromeDriver();
+          WebDriver d = new ChromeDriver();
 		  d.manage().window().maximize();
 		  d.manage().deleteAllCookies();
-		  d.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		  d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  d.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		  d.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		  d.get("https://www.gmail.com");   
 		   
-		  d.findElement(By.xpath("//input[@id='identifierId']")).sendKeys("rudratejas@gmail.com");
+		  d.findElement(By.xpath("//input[@id='identifierId']")).sendKeys("tirupatiteja123@gmail.com");
 		  d.findElement(By.xpath("//div[@id='identifierNext']")).click();
-		  Thread.sleep(5000);
+		  //Thread.sleep(5000);
 
 		   
 		  d.findElement(By.xpath("//input[@name='password']")).sendKeys("8352794111");
 		  d.findElement(By.xpath("//div[@id='passwordNext']")).click();
-		  Thread.sleep(5000);
+		  //Thread.sleep(5000);
 
 		  //Go to mail box 
 		  WebElement t = d.findElement(By.xpath("(//*[@role='tabpanel'])[1]/descendant::table/child::tbody"));
@@ -37,29 +37,35 @@ public class GmailTotalCounts {
 		  List<WebElement> r1 =t.findElements(By.tagName("tr"));
 		  int tcm = r1.size();
 		  System.out.println("Total count of mails...."  +tcm);
+		  Thread.sleep(3000);
+
 
 		  
 		  //Total count of unread mails
 		  List<WebElement> r2 =t.findElements(By.xpath("//*[@class='zA zE']"));
 		  int tcum = r2.size();
 		  System.out.println("Total count of unread mails...."  +tcum);
+		  Thread.sleep(3000);
 
 		  
 		  //Total count of read mails
 		  List<WebElement> r3 =t.findElements(By.xpath("//*[starts-with(@class,'zA yO')]"));
 		  int tcrm = r3.size();
 		  System.out.println("Total count of read mails...."  +tcrm);
+		  Thread.sleep(3000);
 
 		  
 		  //do logout
-		  d.findElement(By.xpath("//*[contains(@title,'Account')]/child::*[1]")).click();
-		  Thread.sleep(5000);
-		  d.findElement(By.linkText("Sign out")).click();
-		  Thread.sleep(5000);
-			
+		//d.findElement(By.xpath("//*[contains(@title,'Account')]/child::*[1]")).click();
+		  d.findElement(By.xpath("//a[@class='gb_b gb_hb gb_R']")).click();
+		 // Thread.sleep(3000);
+		 // d.findElement(By.linkText("Sign out")).click();
+		 // d.findElement(By.xpath("//a[text()='Sign out']")).click();
+		 // Thread.sleep(5000);
 		  
 		  //close site
-		  d.quit();
+		 // d.quit();
+		  
 		  
 	}
 

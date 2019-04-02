@@ -1,7 +1,6 @@
 package com.sikuli;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.sikuli.script.Button;
 import org.sikuli.script.Screen;
 
@@ -10,8 +9,8 @@ public class MillionCloudsRegistration
 	
 
 	public static void main(String[] args)  throws Exception{ 
-		System.setProperty("webdriver.gecko.driver","E:\\Batch230\\geckodriver.exe");	
-		WebDriver driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "D:\\drivers\\ChromeDriver.exe");
+		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://www.millionclouds.com");
 		Thread.sleep(5000);

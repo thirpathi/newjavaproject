@@ -22,15 +22,17 @@ abstract class K extends J                       // partial implimentation class
 	{
 		System.out.println("m2");
 	}
-}
-
-abstract class P extends K                               // fully implimentation class (concrete class)
-{                                 //But if the class is declared as abstract it may or may not have abstract methods.
+	
 	@Override
 	public void m3() 
 	{
 		System.out.println("m3");
 	}
+}
+
+abstract class P extends K                               // fully implimentation class (concrete class)                         *****
+{                                 // if the class is declared as abstract it may or may not have abstract methods.
+	                             // But we don't create the object for that class...
 	public void m5()
 	{
        System.out.println("m5");
@@ -38,7 +40,7 @@ abstract class P extends K                               // fully implimentation
 }
 
 
-class Q extends P
+class Q extends P                         //not abstruct class(fully implimentation class)
 {
 	
 }
